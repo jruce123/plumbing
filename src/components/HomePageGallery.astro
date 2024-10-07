@@ -1,0 +1,82 @@
+---
+import Container from "./Container.astro"
+---
+
+<div class="relative" id="home">
+  <Container>
+    <div class="relative pt-36 ml-auto">
+        <div class="lg:w-2/3 text-center mx-auto">
+            <h1 class="text-gray-900 font-bold text-4xl md:text-5xl xl:text-6xl">WELCOME TO</h1>
+            <h1 class="font-bold text-5xl md:text-6xl xl:text-7xl" style="color: #3E69B2;">MY SYDNEY PLUMBING</h1>
+            <div class="mt-16 flex flex-wrap justify-center gap-y-4 gap-x-6">
+                <a
+                  href="#"
+                  class="relative flex h-11 w-full max-w-xs items-center justify-center px-6 rounded-lg before:absolute before:inset-0 before:rounded-lg before:bg-[#0B2843] before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 sm:w-max"
+                >
+                  <span class="relative flex items-center text-base font-semibold text-white">
+                    <svg class="h-8 w-8 text-white"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
+                    </svg>
+                    Call Now
+                  </span>
+                </a>
+                <a
+                  href="#"
+                  class="relative flex h-11 w-full max-w-xs items-center justify-center px-6 rounded-lg before:absolute before:inset-0 before:rounded-lg before:border before:border-transparent before:bg-white before:bg-gradient-to-b before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 sm:w-max"
+                >
+                  <span class="relative text-base font-semibold text-black">Book Online</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</Container>
+    <!-- Photo Gallery Background -->
+    <div class="photo-gallery">
+        <div class="photo-gallery__image" style="background-image: url('/images/photo background/image1.jpg');"></div>
+        <div class="photo-gallery__image" style="background-image: url('/images/photo background/image2.jpg');"></div>
+        <div class="photo-gallery__image" style="background-image: url('/images/photo background/image3.jpg');"></div>
+    </div>
+</div>
+
+<style>
+.photo-gallery {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 130%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.photo-gallery__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.photo-gallery__image.active {
+    opacity: 1;
+}
+</style>
+
+<script>
+let currentImageIndex = 0;
+const images = document.querySelectorAll('.photo-gallery__image');
+
+function cycleImages() {
+    images[currentImageIndex].classList.remove('active');
+    currentImageIndex = (currentImageIndex + 1) % images.length;
+    images[currentImageIndex].classList.add('active');
+}
+
+setInterval(cycleImages, 5000); // Change image every 5 seconds
+
+// Initialize the first image as active
+images[currentImageIndex].classList.add('active');
+</script>
