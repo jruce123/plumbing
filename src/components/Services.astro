@@ -1,6 +1,5 @@
 ---
 import Container from "./Container.astro"
-
 ---
 
 <div id="features">
@@ -15,124 +14,151 @@ import Container from "./Container.astro"
       </div>
     </div>
 
-    <div class="mt-16 grid divide-x divide-y divide-gray-100 dark:divide-gray-700 overflow-hidden rounded-3xl border border-gray-100 text-gray-600 dark:border-gray-700 sm:grid-cols-2 lg:grid-cols-4 lg:divide-y-0 xl:grid-cols-4"
-    >
-      <div class="group relative bg-white dark:bg-gray-800 transition hover:z-[1] hover:shadow-2xl hover:shadow-gray-600/10">
-        <div class="relative space-y-8 py-12 p-8">
+    <!-- Grid Layout with 2 rows and 4 columns, spaced apart -->
+    <div class="mt-16 grid gap-8 grid-cols-1 md:grid-cols-2 xl:grid-cols-4">
+      <!-- General Plumbing -->
+      <div class="group relative bg-white dark:bg-gray-800 transition hover:z-[1] hover:shadow-2xl hover:shadow-gray-600/10 rounded-lg overflow-hidden flex flex-col justify-between">
+        <div class="relative flex-grow p-8 flex items-center justify-center">
           <img
             src="https://cdn-icons-png.flaticon.com/512/4341/4341139.png"
-            class="w-12"
+            class="w-32 grayscale transition duration-300 ease-in-out transform group-hover:grayscale-0 group-hover:scale-110"
             width="512"
             height="512"
-            alt="burger illustration"
+            alt="General Plumbing"
           />
-
-          <div class="space-y-2">
-            <h5
-              class="text-xl font-semibold text-gray-700 dark:text-white transition group-hover:text-secondary"
-            >
-              First feature
-            </h5>
-            <p class="text-gray-600 dark:text-gray-300">
-              Neque Dolor, fugiat non cum doloribus aperiam voluptates nostrum.
-            </p>
-          </div>
-          <a href="#" class="flex items-center justify-between group-hover:text-secondary">
-            <span class="text-sm">Read more</span>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 -translate-x-4 text-2xl opacity-0 transition duration-300 group-hover:translate-x-0 group-hover:opacity-100">
-              <path fill-rule="evenodd" d="M12.97 3.97a.75.75 0 011.06 0l7.5 7.5a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 11-1.06-1.06l6.22-6.22H3a.75.75 0 010-1.5h16.19l-6.22-6.22a.75.75 0 010-1.06z" clip-rule="evenodd" />
-            </svg>                
-          </a>
+        </div>
+        <!-- Bottom Bar -->
+        <div class="bg-[#0B2843] text-white text-center py-3">
+          General Plumbing
         </div>
       </div>
-      <div class="group relative bg-white dark:bg-gray-800 transition hover:z-[1] hover:shadow-2xl hover:shadow-gray-600/10">
-        <div class="relative space-y-8 py-12 p-8">
+
+      <!-- Blocked Drains -->
+      <div class="group relative bg-white dark:bg-gray-800 transition hover:z-[1] hover:shadow-2xl hover:shadow-gray-600/10 rounded-lg overflow-hidden flex flex-col justify-between">
+        <div class="relative flex-grow p-8 flex items-center justify-center">
           <img
             src="https://cdn-icons-png.flaticon.com/512/4341/4341134.png"
-            class="w-12"
+            class="w-32 grayscale transition duration-300 ease-in-out transform group-hover:grayscale-0 group-hover:scale-110"
             width="512"
             height="512"
-            alt="burger illustration"
+            alt="Blocked Drains"
           />
-
-          <div class="space-y-2">
-            <h5
-              class="text-xl font-semibold text-gray-700 dark:text-white transition group-hover:text-secondary"
-            >
-              Second feature
-            </h5>
-            <p class="text-gray-600 dark:text-gray-300">
-              Neque Dolor, fugiat non cum doloribus aperiam voluptates nostrum.
-            </p>
-          </div>
-          <a href="#" class="flex items-center justify-between group-hover:text-secondary">
-            <span class="text-sm">Read more</span>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 -translate-x-4 text-2xl opacity-0 transition duration-300 group-hover:translate-x-0 group-hover:opacity-100">
-              <path fill-rule="evenodd" d="M12.97 3.97a.75.75 0 011.06 0l7.5 7.5a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 11-1.06-1.06l6.22-6.22H3a.75.75 0 010-1.5h16.19l-6.22-6.22a.75.75 0 010-1.06z" clip-rule="evenodd" />
-            </svg>                
-          </a>
+        </div>
+        <!-- Bottom Bar -->
+        <div class="bg-[#0B2843] text-white text-center py-3">
+          Blocked Drains
         </div>
       </div>
-      <div class="group relative bg-white dark:bg-gray-800 transition hover:z-[1] hover:shadow-2xl hover:shadow-gray-600/10">
-        <div class="relative space-y-8 py-12 p-8">
+
+      <!-- Leaking Pipes -->
+      <div class="group relative bg-white dark:bg-gray-800 transition hover:z-[1] hover:shadow-2xl hover:shadow-gray-600/10 rounded-lg overflow-hidden flex flex-col justify-between">
+        <div class="relative flex-grow p-8 flex items-center justify-center">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/4341/4341139.png"
+            class="w-32 grayscale transition duration-300 ease-in-out transform group-hover:grayscale-0 group-hover:scale-110"
+            width="512"
+            height="512"
+            alt="Leaking Pipes"
+          />
+        </div>
+        <!-- Bottom Bar -->
+        <div class="bg-[#0B2843] text-white text-center py-3">
+          Leaking Pipes
+        </div>
+      </div>
+
+      <!-- Toilet Repair -->
+      <div class="group relative bg-white dark:bg-gray-800 transition hover:z-[1] hover:shadow-2xl hover:shadow-gray-600/10 rounded-lg overflow-hidden flex flex-col justify-between">
+        <div class="relative flex-grow p-8 flex items-center justify-center">
           <img
             src="https://cdn-icons-png.flaticon.com/512/4341/4341160.png"
-            class="w-12"
+            class="w-32 grayscale transition duration-300 ease-in-out transform group-hover:grayscale-0 group-hover:scale-110"
             width="512"
             height="512"
-            alt="burger illustration"
+            alt="Toilet Repair"
           />
-
-          <div class="space-y-2">
-            <h5
-              class="text-xl font-semibold text-gray-700 dark:text-white transition group-hover:text-secondary"
-            >
-              Third feature
-            </h5>
-            <p class="text-gray-600 dark:text-gray-300">
-              Neque Dolor, fugiat non cum doloribus aperiam voluptates nostrum.
-            </p>
-          </div>
-          <a href="#" class="flex items-center justify-between group-hover:text-secondary">
-            <span class="text-sm">Read more</span>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 -translate-x-4 text-2xl opacity-0 transition duration-300 group-hover:translate-x-0 group-hover:opacity-100">
-              <path fill-rule="evenodd" d="M12.97 3.97a.75.75 0 011.06 0l7.5 7.5a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 11-1.06-1.06l6.22-6.22H3a.75.75 0 010-1.5h16.19l-6.22-6.22a.75.75 0 010-1.06z" clip-rule="evenodd" />
-            </svg>                
-          </a>
+        </div>
+        <!-- Bottom Bar -->
+        <div class="bg-[#0B2843] text-white text-center py-3">
+          Toilet Repair
         </div>
       </div>
-      <div
-        class="group relative bg-gray-50 dark:bg-gray-900 transition hover:z-[1] hover:shadow-2xl hover:shadow-gray-600/10"
-      >
-        <div
-          class="relative space-y-8 py-12 p-8 transition duration-300 group-hover:bg-white dark:group-hover:bg-gray-800"
-        >
+
+      <!-- Maintenance -->
+      <div class="group relative bg-white dark:bg-gray-800 transition hover:z-[1] hover:shadow-2xl hover:shadow-gray-600/10 rounded-lg overflow-hidden flex flex-col justify-between">
+        <div class="relative flex-grow p-8 flex items-center justify-center">
           <img
             src="https://cdn-icons-png.flaticon.com/512/4341/4341025.png"
-            class="w-12"
+            class="w-32 grayscale transition duration-300 ease-in-out transform group-hover:grayscale-0 group-hover:scale-110"
             width="512"
             height="512"
-            alt="burger illustration"
+            alt="Maintenance"
           />
+        </div>
+        <!-- Bottom Bar -->
+        <div class="bg-[#0B2843] text-white text-center py-3">
+          Maintenance
+        </div>
+      </div>
 
-          <div class="space-y-2">
-            <h5
-              class="text-xl font-semibold text-gray-700 dark:text-white transition group-hover:text-secondary"
-            >
-              More features
-            </h5>
-            <p class="text-gray-600 dark:text-gray-300">
-              Neque Dolor, fugiat non cum doloribus aperiam voluptates nostrum.
-            </p>
-          </div>
-          <a href="#" class="flex items-center justify-between group-hover:text-secondary">
-            <span class="text-sm">Read more</span>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 -translate-x-4 text-2xl opacity-0 transition duration-300 group-hover:translate-x-0 group-hover:opacity-100">
-              <path fill-rule="evenodd" d="M12.97 3.97a.75.75 0 011.06 0l7.5 7.5a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 11-1.06-1.06l6.22-6.22H3a.75.75 0 010-1.5h16.19l-6.22-6.22a.75.75 0 010-1.06z" clip-rule="evenodd" />
-            </svg>                
-          </a>
+      <!-- Hot Water -->
+      <div class="group relative bg-white dark:bg-gray-800 transition hover:z-[1] hover:shadow-2xl hover:shadow-gray-600/10 rounded-lg overflow-hidden flex flex-col justify-between">
+        <div class="relative flex-grow p-8 flex items-center justify-center">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/4341/4341160.png"
+            class="w-32 grayscale transition duration-300 ease-in-out transform group-hover:grayscale-0 group-hover:scale-110"
+            width="512"
+            height="512"
+            alt="Hot Water"
+          />
+        </div>
+        <!-- Bottom Bar -->
+        <div class="bg-[#0B2843] text-white text-center py-3">
+          Hot Water
+        </div>
+      </div>
+
+      <!-- Gas Fitting -->
+      <div class="group relative bg-white dark:bg-gray-800 transition hover:z-[1] hover:shadow-2xl hover:shadow-gray-600/10 rounded-lg overflow-hidden flex flex-col justify-between">
+        <div class="relative flex-grow p-8 flex items-center justify-center">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/4341/4341134.png"
+            class="w-32 grayscale transition duration-300 ease-in-out transform group-hover:grayscale-0 group-hover:scale-110"
+            width="512"
+            height="512"
+            alt="Gas Fitting"
+          />
+        </div>
+        <!-- Bottom Bar -->
+        <div class="bg-[#0B2843] text-white text-center py-3">
+          Gas Fitting
+        </div>
+      </div>
+
+      <!-- Emergency -->
+      <div class="group relative bg-white dark:bg-gray-800 transition hover:z-[1] hover:shadow-2xl hover:shadow-gray-600/10 rounded-lg overflow-hidden flex flex-col justify-between">
+        <div class="relative flex-grow p-8 flex items-center justify-center">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/4341/4341025.png"
+            class="w-32 grayscale transition duration-300 ease-in-out transform group-hover:grayscale-0 group-hover:scale-110"
+            width="512"
+            height="512"
+            alt="Emergency"
+          />
+        </div>
+        <!-- Bottom Bar -->
+        <div class="bg-[#0B2843] text-white text-center py-3">
+          Emergency
         </div>
       </div>
     </div>
+
+    <!-- 'View All Services' Link Bar -->
+    <div class="mt-8 text-center">
+      <a href="/Services" class="inline-block bg-[#0B2843] text-white text-lg py-4 px-12 rounded-lg hover:bg-[#274066] transition duration-300">
+        View All Services
+      </a>
+    </div>
+
   </Container>
 </div>
